@@ -10073,7 +10073,7 @@ uq4_12_t GetTypeModifier(u32 atkType, u32 defType)
     return sTypeEffectivenessTable[atkType][defType];
 }
 
-s32 GetStealthHazardDamageByTypesAndHP(u8 hazardType, u8 type1, u8 type2, u32 maxHp)
+s32 GetStealthHazardDamageByTypesAndHP(u8 hazardType, u8 type1, u8 type2, u8 type3, u32 maxHp)
 {
     s32 dmg = 0;
     uq4_12_t modifier = UQ_4_12(1.0);
@@ -10081,6 +10081,8 @@ s32 GetStealthHazardDamageByTypesAndHP(u8 hazardType, u8 type1, u8 type2, u32 ma
     modifier = uq4_12_multiply(modifier, GetTypeModifier(hazardType, type1));
     if (type2 != type1)
         modifier = uq4_12_multiply(modifier, GetTypeModifier(hazardType, type2));
+    if (type3 != type2 && type3 != type1)
+        modifier = uq4_12_multiply(modifier, GetTypeModifier(hazardType, type3));
 
     switch (modifier)
     {
@@ -10121,9 +10123,10 @@ s32 GetStealthHazardDamage(u8 hazardType, u32 battler)
 {
     u8 type1 = gBattleMons[battler].type1;
     u8 type2 = gBattleMons[battler].type2;
+    u8 type3 = gBattleMons[battler].type3;
     u32 maxHp = gBattleMons[battler].maxHP;
 
-    return GetStealthHazardDamageByTypesAndHP(hazardType, type1, type2, maxHp);
+    return GetStealthHazardDamageByTypesAndHP(hazardType, type1, type2, type3, maxHp);
 }
 
 bool32 IsPartnerMonFromSameTrainer(u32 battler)
