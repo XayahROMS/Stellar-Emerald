@@ -11222,7 +11222,7 @@ u8 GetBattlerType(u32 battler, u8 typeIndex)
     {
         if (gBattleResources->flags->flags[battler] & RESOURCE_FLAG_ROOST)
         {
-            if (types[0] == TYPE_FLYING && types[1] == TYPE_FLYING)
+            if (types[0] == TYPE_FLYING && types[1] == TYPE_FLYING && types[2] == TYPE_FLYING)
                 return B_ROOST_PURE_FLYING >= GEN_5 ? TYPE_NORMAL : TYPE_MYSTERY;
             else
                 return types[typeIndex] == TYPE_FLYING ? TYPE_MYSTERY : types[typeIndex];

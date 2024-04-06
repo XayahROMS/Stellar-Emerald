@@ -5073,6 +5073,7 @@ static void Cmd_setroost(void)
     gBattleResources->flags->flags[gBattlerAttacker] |= RESOURCE_FLAG_ROOST;
     gBattleStruct->roostTypes[gBattlerAttacker][0] = gBattleMons[gBattlerAttacker].type1;
     gBattleStruct->roostTypes[gBattlerAttacker][1] = gBattleMons[gBattlerAttacker].type2;
+    gBattleStruct->roostTypes[gBattlerAttacker][2] = gBattleMons[gBattlerAttacker].type3;
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
