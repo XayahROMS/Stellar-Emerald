@@ -11009,7 +11009,7 @@ void CopyMonAbilityAndTypesToBattleMon(u32 battler, struct Pokemon *mon)
     gBattleMons[battler].ability = GetMonAbility(mon);
     gBattleMons[battler].type1 = gSpeciesInfo[gBattleMons[battler].species].types[0];
     gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].types[1];
-    gBattleMons[battler].type3 = TYPE_MYSTERY;
+    gBattleMons[battler].type3 = gSpeciesInfo[gBattleMons[battler].species].types[2];
 }
 
 void RecalcBattlerStats(u32 battler, struct Pokemon *mon)
