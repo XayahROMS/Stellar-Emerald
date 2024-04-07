@@ -4890,7 +4890,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
     u16 species;
     u16 i;
     u16 resultsCount;
-    u8 types[2];
+    u8 types[3];
 
     CreatePokedexList(dexMode, order);
 
@@ -4957,7 +4957,8 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
 
                     types[0] = gSpeciesInfo[species].types[0];
                     types[1] = gSpeciesInfo[species].types[1];
-                    if (types[0] == type1 || types[1] == type1)
+                    types[2] = gSpeciesInfo[species].types[2];
+                    if (types[0] == type1 || types[1] == type1 || types[2] == type1)
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                         resultsCount++;
@@ -4975,7 +4976,10 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
 
                     types[0] = gSpeciesInfo[species].types[0];
                     types[1] = gSpeciesInfo[species].types[1];
-                    if ((types[0] == type1 && types[1] == type2) || (types[0] == type2 && types[1] == type1))
+                    types[2] = gSpeciesInfo[species].types[2];
+                    if ((types[0] == type1 && types[1] == type2) || (types[0] == type2 && types[1] == type1)
+                    || (types[0] == type1 && types[2] == type2) || (types[0] == type2 && types[2] == type1)
+                    || (types[1] == type1 && types[2] == type2) || (types[1] == type2 && types[2] == type1))
                     {
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                         resultsCount++;
