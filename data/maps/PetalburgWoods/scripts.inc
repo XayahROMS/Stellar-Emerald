@@ -107,6 +107,7 @@ PetalburgWoods_EventScript_DevonResearcherFinish::
 	waitmovement 0
 	msgbox PetalburgWoods_Text_ICantBeWastingTime, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_PETALBURG_GYM_STATE, 6
 	return
 
 PetalburgWoods_EventScript_RemoveDevonResearcher::
