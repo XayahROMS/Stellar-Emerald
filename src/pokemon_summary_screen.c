@@ -3916,6 +3916,7 @@ static void SetMonTypeIcons(void)
     {
         SetTypeSpritePosAndPal(TYPE_MYSTERY, 120, 48, SPRITE_ARR_ID_TYPE);
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+        SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 2, TRUE);
     }
     else
     {
@@ -3928,6 +3929,15 @@ static void SetMonTypeIcons(void)
         else
         {
             SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+        }
+        if (gSpeciesInfo[summary->species].types[0] != gSpeciesInfo[summary->species].types[2] && gSpeciesInfo[summary->species].types[1] != gSpeciesInfo[summary->species].types[2])
+        {
+            SetTypeSpritePosAndPal(gSpeciesInfo[summary->species].types[2], 200, 48, SPRITE_ARR_ID_TYPE + 2);
+            SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 2, FALSE);
+        }
+        else
+        {
+            SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 2, TRUE);
         }
         if (P_SHOW_TERA_TYPE >= GEN_9)
         {
