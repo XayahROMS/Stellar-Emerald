@@ -4544,7 +4544,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sYamaskGalarianLevelUpLearnset,
         .teachableLearnset = sYamaskGalarianTeachableLearnset,
         .formSpeciesIdTable = sYamaskFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_SCRIPT_TRIGGER_DMG, 49, SPECIES_RUNERIGUS}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_RUNERIGUS}),
     },
 
     [SPECIES_RUNERIGUS] =
