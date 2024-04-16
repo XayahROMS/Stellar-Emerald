@@ -1921,9 +1921,9 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .aiRating = 3,
     },
 
-    [ABILITY_PUNK_ROCK] =
+    [ABILITY_AMPLIFIER] =
     {
-        .name = _("Punk Rock"),
+        .name = _("Amplifier"),
         .description = COMPOUND_STRING("Ups and resists sound."),
         .aiRating = 2,
         .breakable = TRUE,

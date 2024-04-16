@@ -8926,7 +8926,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (moveType == TYPE_NORMAL && gBattleStruct->ateBoost[battlerAtk])
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
-    case ABILITY_PUNK_ROCK:
+    case ABILITY_AMPLIFIER:
         if (gMovesInfo[move].soundMove)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;
@@ -9671,7 +9671,7 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
         if (IsMoveMakingContact(move, battlerAtk) && moveType != TYPE_FIRE)
             return UQ_4_12(0.5);
         break;
-    case ABILITY_PUNK_ROCK:
+    case ABILITY_AMPLIFIER:
         if (gMovesInfo[move].soundMove)
             return UQ_4_12(0.5);
         break;

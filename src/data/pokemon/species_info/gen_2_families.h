@@ -5759,10 +5759,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 580,
         .description = COMPOUND_STRING(
-            "A Smeargle marks its territory using a\n"
-            "fluid that leaks out from the tip of its\n"
-            "tail. About 5,000 different marks left by\n"
-            "this Pokémon have been found."),
+            "Due to small metal particles, Smeargle's\n"
+            "paint is banned from commercial use.\n"
+            "Cleaning crews that interact with its \n"
+            "graffiti undergo regular health tests."),
         .pokemonScale = 287,
         .pokemonOffset = 5,
         .trainerScale = 256,
