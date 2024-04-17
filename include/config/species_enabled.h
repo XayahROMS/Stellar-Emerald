@@ -299,7 +299,7 @@
 #define P_FAMILY_MANAPHY                 P_GEN_4_POKEMON
 #define P_FAMILY_DARKRAI                 P_GEN_4_POKEMON
 #define P_FAMILY_SHAYMIN                 P_GEN_4_POKEMON
-#define P_FAMILY_ARCEUS                  P_GEN_4_POKEMON
+#define P_FAMILY_ARCEUS                  FALSE
 
 #define P_FAMILY_VICTINI                 P_GEN_5_POKEMON
 #define P_FAMILY_SNIVY                   P_GEN_5_POKEMON
@@ -447,7 +447,7 @@
 #define P_FAMILY_WIMPOD                  P_GEN_7_POKEMON
 #define P_FAMILY_SANDYGAST               P_GEN_7_POKEMON
 #define P_FAMILY_PYUKUMUKU               P_GEN_7_POKEMON
-#define P_FAMILY_TYPE_NULL               P_GEN_7_POKEMON
+#define P_FAMILY_TYPE_NULL               FALSE
 #define P_FAMILY_MINIOR                  P_GEN_7_POKEMON
 #define P_FAMILY_KOMALA                  P_GEN_7_POKEMON
 #define P_FAMILY_TURTONATOR              P_GEN_7_POKEMON
