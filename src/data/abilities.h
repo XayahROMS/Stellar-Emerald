@@ -2599,4 +2599,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_FAULTY_FORECAST] =
+    {
+        .name = _("Faulty Forecast"),
+        .description = COMPOUND_STRING("Summons random weather."),
+        .aiRating = 9,
+    },
 };
