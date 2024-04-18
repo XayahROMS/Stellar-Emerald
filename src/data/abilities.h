@@ -2605,5 +2605,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Faulty Forecast"),
         .description = COMPOUND_STRING("Summons random weather."),
         .aiRating = 9,
+        .cantBeCopied = TRUE,
+        .cantBeTraced = TRUE,
     },
 };
