@@ -408,26 +408,39 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    if (VarGet(VAR_STARTER_REGION) == 0)
+    switch (VarGet(VAR_STARTER_REGION))
+    {
+    case 0:
         return sStarterMonKanto[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 1)
+        break;
+    case 1:
         return sStarterMonJohto[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 2)
+        break;
+    case 2:
         return sStarterMonHoenn[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 3)
+        break;
+    case 3:
         return sStarterMonSinnoh[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 4)
+        break;
+    case 4:
         return sStarterMonUnova[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 5)
+        break;
+    case 5:
         return sStarterMonKalos[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 6)
+        break;
+    case 6:
         return sStarterMonAlola[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 7)
+        break;
+    case 7:
         return sStarterMonGalar[chosenStarterId];
-    else if (VarGet(VAR_STARTER_REGION) == 8)
+        break;
+    case 8:
         return sStarterMonPaldea[chosenStarterId];
-    else
-        return sStarterMonGalar[chosenStarterId];
+        break;
+    default:
+        return sStarterMonHoenn[chosenStarterId];
+        break;
+    }
 }
 
 static void VblankCB_StarterChoose(void)

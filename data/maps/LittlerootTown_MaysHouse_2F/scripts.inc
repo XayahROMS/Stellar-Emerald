@@ -699,7 +699,7 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 # 350 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
 RivalsHouse_2F_Text_MaySeeYouLater:
 # 351 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
-	.string "That one's cool, though I haven't been!\p"
+	.string "That one's cool, I'll tell dad!\p"
 # 352 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
 	.string "Anyway, see you later {PLAYER}{KUN}!$"
 # 353 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
@@ -755,7 +755,7 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 # 378 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
 RivalsHouse_2F_Text_BrendanSeeYouLater:
 # 379 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
-	.string "That one's cool, though I haven't been!\p"
+	.string "That one's cool, I'll let dad know!\p"
 # 380 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"
 	.string "Anyway, see you later {PLAYER}{KUN}!$"
 # 381 "data/maps/LittlerootTown_MaysHouse_2F/scripts.pory"

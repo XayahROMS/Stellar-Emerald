@@ -348,7 +348,7 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 	.string "{PLAYER}{KUN}, do you have a favorite region?$"
 
 RivalsHouse_2F_Text_MaySeeYouLater:
-	.string "That one's cool, though I haven't been!\p"
+	.string "That one's cool, I'll tell Dad!\p"
 	.string "Anyway, see you later {PLAYER}{KUN}!$"
 
 RivalsHouse_2F_Text_MayGettingReady:
@@ -376,7 +376,7 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "{PLAYER}{KUN}, do you have a favorite region?$"
 
 RivalsHouse_2F_Text_BrendanSeeYouLater:
-	.string "That one's cool, though I haven't been!\p"
+	.string "That one's cool, I'll let Dad know!\p"
 	.string "Anyway, see you later {PLAYER}{KUN}!$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:
