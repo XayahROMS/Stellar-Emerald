@@ -110,11 +110,67 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {8, 4},
 };
 
-static const u16 sStarterMon[STARTER_MON_COUNT] =
+static const u16 sStarterMonKanto[STARTER_MON_COUNT] =
+{
+    SPECIES_BULBASAUR,
+    SPECIES_CHARMANDER,
+    SPECIES_SQUIRTLE,
+};
+
+static const u16 sStarterMonJohto[STARTER_MON_COUNT] =
+{
+    SPECIES_CHIKORITA,
+    SPECIES_CYNDAQUIL,
+    SPECIES_TOTODILE,
+};
+
+static const u16 sStarterMonHoenn[STARTER_MON_COUNT] =
 {
     SPECIES_TREECKO,
     SPECIES_TORCHIC,
     SPECIES_MUDKIP,
+};
+
+static const u16 sStarterMonSinnoh[STARTER_MON_COUNT] =
+{
+    SPECIES_TURTWIG,
+    SPECIES_CHIMCHAR,
+    SPECIES_PIPLUP,
+};
+
+static const u16 sStarterMonUnova[STARTER_MON_COUNT] =
+{
+    SPECIES_SNIVY,
+    SPECIES_TEPIG,
+    SPECIES_OSHAWOTT,
+};
+
+static const u16 sStarterMonKalos[STARTER_MON_COUNT] =
+{
+    SPECIES_CHESPIN,
+    SPECIES_FENNEKIN,
+    SPECIES_FROAKIE,
+};
+
+static const u16 sStarterMonAlola[STARTER_MON_COUNT] =
+{
+    SPECIES_ROWLET,
+    SPECIES_LITTEN,
+    SPECIES_POPPLIO,
+};
+
+static const u16 sStarterMonGalar[STARTER_MON_COUNT] =
+{
+    SPECIES_GROOKEY,
+    SPECIES_SCORBUNNY,
+    SPECIES_SOBBLE,
+};
+
+static const u16 sStarterMonPaldea[STARTER_MON_COUNT] =
+{
+    SPECIES_SPRIGATITO,
+    SPECIES_FUECOCO,
+    SPECIES_QUAXLY,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -352,7 +408,26 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+    if (VarGet(VAR_STARTER_REGION) == 0)
+        return sStarterMonKanto[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 1)
+        return sStarterMonJohto[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 2)
+        return sStarterMonHoenn[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 3)
+        return sStarterMonSinnoh[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 4)
+        return sStarterMonUnova[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 5)
+        return sStarterMonKalos[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 6)
+        return sStarterMonAlola[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 7)
+        return sStarterMonGalar[chosenStarterId];
+    else if (VarGet(VAR_STARTER_REGION) == 8)
+        return sStarterMonPaldea[chosenStarterId];
+    else
+        return sStarterMonGalar[chosenStarterId];
 }
 
 static void VblankCB_StarterChoose(void)

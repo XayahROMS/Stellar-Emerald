@@ -86,6 +86,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayNorth::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_MaySeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayNorth
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCNorth
@@ -98,6 +101,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_MaySeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMaySouth
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCSouth
@@ -110,6 +116,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_MaySeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCWest
 	waitmovement 0
@@ -121,6 +130,9 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_MaySeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayEast
 	applymovement LOCALID_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCEast
@@ -332,8 +344,12 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 	.string "Eheheh…\p"
 	.string "Oh, no! I forgot!\p"
 	.string "I was supposed to go help Dad catch\n"
-	.string "some wild POKéMON!\p"
-	.string "{PLAYER}{KUN}, I'll catch you later!$"
+	.string "some POKéMON from another region!\p"
+	.string "{PLAYER}{KUN}, do you have a favorite region?$"
+
+RivalsHouse_2F_Text_MaySeeYouLater:
+	.string "That one's cool, though I haven't been!\p"
+	.string "Anyway, see you later {PLAYER}{KUN}!$"
 
 RivalsHouse_2F_Text_MayGettingReady:
 	.string "POKéMON fully restored!\n"
@@ -355,9 +371,13 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "a POKéMON?\p"
 	.string "Do you want me to go catch you one?\p"
 	.string "Aw, darn, I forgot…\p"
-	.string "I'm supposed to go help my dad catch\n"
-	.string "some wild POKéMON.\p"
-	.string "Some other time, okay?$"
+	.string "I was supposed to go help Dad catch\n"
+	.string "some POKéMON from another region!\p"
+	.string "{PLAYER}{KUN}, do you have a favorite region?$"
+
+RivalsHouse_2F_Text_BrendanSeeYouLater:
+	.string "That one's cool, though I haven't been!\p"
+	.string "Anyway, see you later {PLAYER}{KUN}!$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:
 	.string "POKéMON fully restored…\n"
@@ -399,3 +419,38 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
 `
+text StarterRegionKanto{
+	"Kanto"
+}
+
+text StarterRegionJohto{
+	"Johto"
+}
+
+text StarterRegionHoenn{
+	"Hoenn"
+}
+
+text StarterRegionSinnoh{
+	"Sinnoh"
+}
+
+text StarterRegionUnova{
+	"Unova"
+}
+
+text StarterRegionKalos{
+	"Kalos"
+}
+
+text StarterRegionAlola{
+	"Alola"
+}
+
+text StarterRegionGalar{
+	"Galar"
+}
+
+text StarterRegionPaldea{
+	"Paldea"
+}

@@ -87,6 +87,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanNorth::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_BrendanSeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanNorth
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCNorth
@@ -99,6 +102,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanSouth::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_BrendanSeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanSouth
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCSouth
@@ -111,6 +117,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
+	dynmultichoice 25, 1, 1, 5, 0, DYN_MULTICHOICE_CB_NONE, StarterRegionKanto, StarterRegionJohto, StarterRegionHoenn, StarterRegionSinnoh, StarterRegionUnova, StarterRegionKalos, StarterRegionAlola, StarterRegionGalar, StarterRegionPaldea
+	copyvar VAR_STARTER_REGION, VAR_RESULT
+	msgbox RivalsHouse_2F_Text_BrendanSeeYouLater, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanWest
 	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest
