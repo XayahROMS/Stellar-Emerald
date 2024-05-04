@@ -487,7 +487,7 @@ PetalburgWoods_Text_DevonResearcherPanic:
 
 script PetalburgWoods_EventScript_DevonResearcherPanicTalk {
 	lockall
-	applymovement(17, emote_exclamation_mark)
+	applymovement(17, PetalburgWoods_Movement_ExclamationMark)
 	faceplayer
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	releaseall
@@ -495,8 +495,7 @@ script PetalburgWoods_EventScript_DevonResearcherPanicTalk {
 
 script PetalburgWoods_EventScript_DevonResearcherPanicTriggerN {
 	lockall
-	applymovement(17, emote_exclamation_mark)
-	applymovement(17, face_up)
+	applymovement(17, PetalburgWoods_Movement_UpAndExclamationMark)
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	applymovement(OBJ_EVENT_ID_PLAYER, walk_right)
 	releaseall
@@ -504,9 +503,22 @@ script PetalburgWoods_EventScript_DevonResearcherPanicTriggerN {
 
 script PetalburgWoods_EventScript_DevonResearcherPanicTriggerS {
 	lockall
-	applymovement(17, emote_exclamation_mark)
-	applymovement(17, face_down)
+	applymovement(17, PetalburgWoods_Movement_DownAndExclamationMark)
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	applymovement(OBJ_EVENT_ID_PLAYER, walk_right)
 	releaseall
+}
+
+movement PetalburgWoods_Movement_ExclamationMark {
+	emote_exclamation_mark
+}
+
+movement PetalburgWoods_Movement_UpAndExclamationMark {
+	emote_exclamation_mark
+	face_up
+}
+
+movement PetalburgWoods_Movement_DownAndExclamationMark {
+	emote_exclamation_mark
+	face_down
 }
