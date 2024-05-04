@@ -488,6 +488,7 @@ PetalburgWoods_Text_DevonResearcherPanic:
 script PetalburgWoods_EventScript_DevonResearcherPanicTalk {
 	lockall
 	applymovement(17, PetalburgWoods_Movement_ExclamationMark)
+	waitmovement(0)
 	faceplayer
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	releaseall
@@ -496,16 +497,20 @@ script PetalburgWoods_EventScript_DevonResearcherPanicTalk {
 script PetalburgWoods_EventScript_DevonResearcherPanicTriggerN {
 	lockall
 	applymovement(17, PetalburgWoods_Movement_UpAndExclamationMark)
+	waitmovement(0)
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	applymovement(OBJ_EVENT_ID_PLAYER, PetalburgWoods_Movement_WalkRight)
+	waitmovement(0)
 	releaseall
 }
 
 script PetalburgWoods_EventScript_DevonResearcherPanicTriggerS {
 	lockall
 	applymovement(17, PetalburgWoods_Movement_DownAndExclamationMark)
+	waitmovement(0)
 	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
 	applymovement(OBJ_EVENT_ID_PLAYER, PetalburgWoods_Movement_WalkRight)
+	waitmovement(0)
 	releaseall
 }
 
