@@ -476,4 +476,37 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
 
+PetalburgWoods_Text_DevonResearcherPanic:
+	.string "What the...\n"
+	.string "How'd he grow these trees so fast?!\p"
+	.string "Look kid, I appreciate your help, but\n"
+	.string "I need someone experienced right now.\p"
+	.string "Can't you go find your dad or\n"
+	.string "something?$"
 `
+
+script PetalburgWoods_EventScript_DevonResearcherPanicTalk {
+	lockall
+	applymovement(17, emote_exclamation_mark)
+	faceplayer
+	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
+	releaseall
+}
+
+script PetalburgWoods_EventScript_DevonResearcherPanicTriggerN {
+	lockall
+	applymovement(17, emote_exclamation_mark)
+	applymovement(17, face_up)
+	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
+	applymovement(OBJ_EVENT_ID_PLAYER, walk_right)
+	releaseall
+}
+
+script PetalburgWoods_EventScript_DevonResearcherPanicTriggerS {
+	lockall
+	applymovement(17, emote_exclamation_mark)
+	applymovement(17, face_down)
+	msgbox(PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC)
+	applymovement(OBJ_EVENT_ID_PLAYER, walk_right)
+	releaseall
+}

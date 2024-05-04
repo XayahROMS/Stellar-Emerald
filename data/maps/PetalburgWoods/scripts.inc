@@ -952,3 +952,65 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "If a POKéMON runs out of PP, it must be\n"
 # 477 "data/maps/PetalburgWoods/scripts.pory"
 	.string "taken to a POKéMON CENTER.$"
+# 478 "data/maps/PetalburgWoods/scripts.pory"
+
+# 479 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_DevonResearcherPanic:
+# 480 "data/maps/PetalburgWoods/scripts.pory"
+	.string "What the...\n"
+# 481 "data/maps/PetalburgWoods/scripts.pory"
+	.string "How'd he grow these trees so fast?!\p"
+# 482 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Look kid, I appreciate your help, but\n"
+# 483 "data/maps/PetalburgWoods/scripts.pory"
+	.string "I need someone experienced right now.\p"
+# 484 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Can't you go find your dad or\n"
+# 485 "data/maps/PetalburgWoods/scripts.pory"
+	.string "something?$"
+
+PetalburgWoods_EventScript_DevonResearcherPanicTalk::
+# 489 "data/maps/PetalburgWoods/scripts.pory"
+	lockall
+# 490 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement 17, emote_exclamation_mark
+# 491 "data/maps/PetalburgWoods/scripts.pory"
+	faceplayer
+# 492 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+# 493 "data/maps/PetalburgWoods/scripts.pory"
+	releaseall
+	return
+
+
+PetalburgWoods_EventScript_DevonResearcherPanicTriggerN::
+# 497 "data/maps/PetalburgWoods/scripts.pory"
+	lockall
+# 498 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement 17, emote_exclamation_mark
+# 499 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement 17, face_up
+# 500 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+# 501 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, walk_right
+# 502 "data/maps/PetalburgWoods/scripts.pory"
+	releaseall
+	return
+
+
+PetalburgWoods_EventScript_DevonResearcherPanicTriggerS::
+# 506 "data/maps/PetalburgWoods/scripts.pory"
+	lockall
+# 507 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement 17, emote_exclamation_mark
+# 508 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement 17, face_down
+# 509 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+# 510 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, walk_right
+# 511 "data/maps/PetalburgWoods/scripts.pory"
+	releaseall
+	return
+
