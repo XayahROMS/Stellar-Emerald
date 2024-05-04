@@ -511,18 +511,23 @@ script PetalburgWoods_EventScript_DevonResearcherPanicTriggerS {
 
 movement PetalburgWoods_Movement_ExclamationMark {
 	emote_exclamation_mark
+	delay_8
 }
 
 movement PetalburgWoods_Movement_UpAndExclamationMark {
 	emote_exclamation_mark
+	delay_8
 	face_up
 }
 
 movement PetalburgWoods_Movement_DownAndExclamationMark {
 	emote_exclamation_mark
+	delay_8
 	face_down
 }
 
 movement PetalburgWoods_Movement_WalkRight {
+	delay_8
 	walk_right
+	step_end
 }
