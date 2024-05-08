@@ -34,6 +34,7 @@ PetalburgCity_WallysHouse_EventScript_WallysDad::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, PetalburgCity_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
 	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceievedHMSurf
+	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_WallysHouse_EventScript_NewGiveHMSurf
 	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
 	msgbox PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally, MSGBOX_DEFAULT
 	setflag FLAG_THANKED_FOR_PLAYING_WITH_WALLY
@@ -136,4 +137,28 @@ PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling:
 	.string "I'm sure that he'll come back safe\n"
 	.string "and sound one day!$"
 
+PetalburgCity_WallysHouse_Text_GiveSurf:
+	.string "{PLAYER}{KUN}, how are you doing?\p"
+	.string "...\p"
+	.string "You already beat your dad? That's\n"
+	.string "very impressive! Here, I have\p"
+	.string "something to celebrate!"
+
+PetalburgCity_WallysHouse_Text_AfterSurf:
+	.string "That little machine should let you\n"
+	.string "traverse water with ease.\p"
+	.string "Hopefully it helps you on your\n"
+	.string "journey.\p"
+	.string "When I was young, I used it for\n"
+	.string "a shortcut to Slateport City over\p"
+	.string "on Route 103.$"
 `
+
+script PetalburgCity_WallysHouse_EventScript_NewGiveHMSurf {
+	lockall
+	msgbox(PetalburgCity_WallysHouse_Text_GiveSurf, MSGBOX_NPC)
+	giveitem(ITEM_HM_SURF)
+	setflag(FLAG_RECEIVED_HM_SURF)
+	msgbox(PetalburgCity_WallysHouse_Text_AfterSurf, MSGBOX_NPC)
+	releaseall
+}
