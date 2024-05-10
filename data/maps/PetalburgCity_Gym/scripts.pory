@@ -1507,7 +1507,7 @@ PetalburgCity_Gym_Text_NormanWalksOff:
 	.string "got your first badge. They might\n"
 	.string "have something for you.\p"
 	.string "Anywho, I gotta get going. Good\n"
-	.string "luck on your journey, {Player}.\p"
+	.string "luck on your journey, {PLAYER}.\p"
 	.string "You can leave that trouble to me.$"
 
 @ Unused
