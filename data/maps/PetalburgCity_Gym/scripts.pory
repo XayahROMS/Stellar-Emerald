@@ -1594,6 +1594,7 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 script PetalburgCity_Gym_EventScript_NormanWalksOffNorth {
 	lockall
 	msgbox(PetalburgCity_Gym_Text_NormanWalksOff)
+	closemessage
 	applymovement(LOCALID_NORMAN, PetalburgCity_Gym_NormanLeavesNorth)
 	waitmovement(0)
 	removeobject(LOCALID_NORMAN)
@@ -1603,6 +1604,7 @@ script PetalburgCity_Gym_EventScript_NormanWalksOffNorth {
 script PetalburgCity_Gym_EventScript_NormanWalksOffWest {
 	lockall
 	msgbox(PetalburgCity_Gym_Text_NormanWalksOff)
+	closemessage
 	applymovement(LOCALID_NORMAN, PetalburgCity_Gym_NormanLeavesWest)
 	waitmovement(0)
 	removeobject(LOCALID_NORMAN)
@@ -1612,6 +1614,7 @@ script PetalburgCity_Gym_EventScript_NormanWalksOffWest {
 script PetalburgCity_Gym_EventScript_NormanWalksOffEast {
 	lockall
 	msgbox(PetalburgCity_Gym_Text_NormanWalksOff)
+	closemessage
 	applymovement(LOCALID_NORMAN, PetalburgCity_Gym_NormanLeavesEast)
 	waitmovement(0)
 	removeobject(LOCALID_NORMAN)
