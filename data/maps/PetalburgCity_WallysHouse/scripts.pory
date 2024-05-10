@@ -142,7 +142,7 @@ PetalburgCity_WallysHouse_Text_GiveSurf:
 	.string "...\p"
 	.string "You already beat your dad? That's\n"
 	.string "very impressive! Here, I have\p"
-	.string "something to celebrate!"
+	.string "something to celebrate!$"
 
 PetalburgCity_WallysHouse_Text_AfterSurf:
 	.string "That little machine should let you\n"
