@@ -10622,7 +10622,6 @@ const struct Item gItemsInfo[] =
             "that lets you\n"
             "traverse water."),
         .importance = 1,
-        .pocket = POCKET_TM_HM,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
