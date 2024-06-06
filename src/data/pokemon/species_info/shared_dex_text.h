@@ -1,9 +1,9 @@
 // Gen 1 families
 const u8 gRaticateAlolanPokedexText[] = _(
     "It forms a group of Rattata, which it \n"
-    "assumes command of. Each group\n"
-    "has its own territory, and disputes\n"
-    "over food happen often.");
+    "assumes command of. They live in deep\n"
+    "burrows, in which they fiercely defend\n"
+    "both territory and food.");
 
 const u8 gPichuPokedexText[] = _(
     "It is still inept at retaining electricity.\n"
