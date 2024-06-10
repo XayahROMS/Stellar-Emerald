@@ -65,6 +65,7 @@ static void ItemUseOnFieldCB_Itemfinder(u8);
 static void ItemUseOnFieldCB_Berry(u8);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
+static void ItemUseOnFieldCB_PokeVial(u8);
 static bool8 TryToWaterSudowoodo(void);
 static void BootUpSoundTMHM(u8);
 static void Task_ShowTMHMContainedMessage(u8);
@@ -1500,6 +1501,31 @@ void FieldUseFunc_VsSeeker(u8 taskId)
 void Task_ItemUse_CloseMessageBoxAndReturnToField_VsSeeker(u8 taskId)
 {
     Task_CloseCantUseKeyItemMessage(taskId);
+}
+
+extern u8 PokeVialHealScript[];
+
+void ItemUseOutOfBattle_PokeVial(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_PokeVial;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_PokeVial;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+}
+
+void ItemUseOnFieldCB_PokeVial(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(PokeVialHealScript);
+    DestroyTask(taskId);
 }
 
 #undef tUsingRegisteredKeyItem

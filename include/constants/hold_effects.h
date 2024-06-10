@@ -164,6 +164,12 @@
 // Gen2 hold effect
 #define HOLD_EFFECT_BERSERK_GENE        184
 
+//New hold effects
+
+#define HOLD_EFFECT_HYPNO_ORB           185
+#define HOLD_EFFECT_FRIGID_ORB          186
+#define HOLD_EFFECT_STATIC_ORB          187
+
 #define HOLD_EFFECT_CHOICE(holdEffect)((holdEffect == HOLD_EFFECT_CHOICE_BAND || holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_CHOICE_SPECS))
 
 // Terrain seed params

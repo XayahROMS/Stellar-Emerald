@@ -481,6 +481,9 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // Status Orbs
     [ITEM_FLAME_ORB] = {gItemIcon_FlameOrb, gItemIconPalette_FlameOrb},
     [ITEM_TOXIC_ORB] = {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
+    [ITEM_HYPNO_ORB] = {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
+    [ITEM_FRIGID_ORB] = {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
+    [ITEM_STATIC_ORB] = {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
     // Weather Rocks
     [ITEM_DAMP_ROCK] = {gItemIcon_DampRock, gItemIconPalette_DampRock},
     [ITEM_HEAT_ROCK] = {gItemIcon_HeatRock, gItemIconPalette_HeatRock},
@@ -873,6 +876,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SWAP_SNACK] = {gItemIcon_SwapSnack, gItemIconPalette_SwapSnack},
     [ITEM_TWICE_SPICED_RADISH] = {gItemIcon_TwiceSpicedRadish, gItemIconPalette_TwiceSpicedRadish},
     [ITEM_POKESHI_DOLL] = {gItemIcon_PokeshiDoll, gItemIconPalette_PokeshiDoll},
+    [ITEM_POKE_VIAL] = {gItemIcon_Flute, gItemIconPalette_BlueFlute},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

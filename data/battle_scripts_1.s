@@ -650,6 +650,8 @@ BattleScript_EffectFling::
 	jumpiflastuseditemberry BattleScript_EffectFlingConsumeBerry
 	jumpifability BS_TARGET, ABILITY_SHIELD_DUST, BattleScript_FlingBlockedByShieldDust
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_FLAME_ORB, BattleScript_FlingFlameOrb
+	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_FRIGID_ORB, BattleScript_FlingFrigidOrb
+	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_STATIC_ORB, BattleScript_FlingStaticOrb
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_FLINCH, BattleScript_FlingFlinch
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_LIGHT_BALL, BattleScript_FlingLightBall
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_MENTAL_HERB, BattleScript_FlingMentalHerb
@@ -683,6 +685,30 @@ BattleScript_FlingBlockedByShieldDust::
 BattleScript_FlingFlameOrb:
 	seteffectsecondary MOVE_EFFECT_BURN
 	goto BattleScript_FlingEnd
+
+BattleScript_FlingHypnoOrb:
+	jumpifability BS_TARGET, ABILITY_VITAL_SPIRIT, BattleScript_PrintBattlerAbilityMadeIneffective
+	jumpifability BS_TARGET, ABILITY_INSOMNIA, BattleScript_PrintBattlerAbilityMadeIneffective
+	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_PrintBattlerAbilityMadeIneffective
+	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
+	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifleafguardprotected BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
+	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
+	jumpifsubstituteblocks BattleScript_ButItFailed
+	jumpifsafeguard BattleScript_SafeguardProtected
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	jumpifuproarwakes BattleScript_ButItFailed
+	setyawn BattleScript_ButItFailed
+	goto BattleScript_FlingEnd
+
+BattleScript_FlingFrigidOrb:
+	seteffectsecondary MOVE_EFFECT_FROSTBITE
+	goto BattleScript_FlingEnd
+
+BattleScript_FlingStaticOrb:
+	seteffectsecondary MOVE_EFFECT_PARALYSIS
+	goto BattleScript_FlingEnd
+
 BattleScript_FlingFlinch:
 	seteffectsecondary MOVE_EFFECT_FLINCH
 	goto BattleScript_FlingEnd
@@ -7417,6 +7443,24 @@ BattleScript_FlameOrb::
 	setbyte cMULTISTRING_CHOOSER, 0
 	copybyte gEffectBattler, gBattlerAttacker
 	call BattleScript_MoveEffectBurn
+	end2
+
+BattleScript_HypnoOrb::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectSleep
+	end2
+
+BattleScript_FrigidOrb::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectFrostbite
+	end2
+
+BattleScript_StaticOrb::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectParalysis
 	end2
 
 BattleScript_MoveEffectPoison::

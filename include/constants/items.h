@@ -1001,7 +1001,14 @@
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 828
+// New Items
+
+#define ITEM_POKE_VIAL 828
+#define ITEM_HYPNO_ORB 829
+#define ITEM_FRIGID_ORB 830
+#define ITEM_STATIC_ORB 831
+
+#define ITEMS_COUNT 832
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -1,5 +1,5 @@
 EventScript_UseSurf::
-	setvar VAR_RESULT, 1
+	setvar VAR_RESULT, 0
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	lockall

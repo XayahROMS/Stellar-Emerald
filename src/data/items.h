@@ -7037,6 +7037,51 @@ const struct Item gItemsInfo[] =
         .flingPower = 30,
     },
 
+    [ITEM_HYPNO_ORB] =
+    {
+        .name = _("Hypno Orb"),
+        .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .holdEffect = HOLD_EFFECT_HYPNO_ORB,
+        .description = COMPOUND_STRING(
+            "A bizarre orb that\n"
+            "puts the holder to\n"
+            "sleep in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_FRIGID_ORB] =
+    {
+        .name = _("Frigid Orb"),
+        .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .holdEffect = HOLD_EFFECT_FRIGID_ORB,
+        .description = COMPOUND_STRING(
+            "A bizarre orb that\n"
+            "freezes the holder\n"
+            "in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
+    [ITEM_STATIC_ORB] =
+    {
+        .name = _("Static Orb"),
+        .price = (I_PRICE >= GEN_9) ? 15000 : ((I_PRICE >= GEN_7) ? 4000 : 200),
+        .holdEffect = HOLD_EFFECT_STATIC_ORB,
+        .description = COMPOUND_STRING(
+            "A bizarre orb that\n"
+            "paralyzes the\n"
+            "holder in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+
 // Weather Rocks
 
     [ITEM_DAMP_ROCK] =
@@ -12625,4 +12670,17 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_POKE_VIAL] = 
+    {
+        .name = _("Poké Vial"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A small machine used\n"
+            "at Poké Centers. Heals\n"
+            "the whole party."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeVial,
+    }
 };

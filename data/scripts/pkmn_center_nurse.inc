@@ -24,6 +24,12 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
 	end
 
+PokeVialHealScript::
+	special HealPlayerParty
+	msgbox PokeVialText, MSGBOX_DEFAULT
+	releaseall
+	end
+
 EventScript_PkmnCenterNurse_IllTakeYourPkmn::
 	message gText_IllTakeYourPkmn
 	return

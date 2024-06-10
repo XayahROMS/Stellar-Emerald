@@ -2674,6 +2674,27 @@ bool32 ShouldPoisonSelf(u32 battler, u32 ability)
     return FALSE;
 }
 
+bool32 ShouldSleepSelf(u32 battler, u32 ability)
+{
+    if (AI_CanSleep(battler, ability) && (
+      HasMoveEffect(battler, EFFECT_SLEEP_TALK)
+      || HasMoveEffect(battler, EFFECT_SNORE)))
+        return TRUE;    // battler can be slept and has move/ability that synergizes with being slept
+    return FALSE;
+}
+
+bool32 ShouldParalyzeSelf(u32 battler, u32 ability)
+{
+    if (AI_CanBeParalyzed(battler, ability) && (
+     ability == ABILITY_MARVEL_SCALE
+      || ability == ABILITY_QUICK_FEET
+      || (ability == ABILITY_GUTS && HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
+      || HasMoveEffect(battler, EFFECT_FACADE)
+      || HasMoveEffect(battler, EFFECT_PSYCHO_SHIFT)))
+        return TRUE;    // battler can be poisoned and has move/ability that synergizes with being poisoned
+    return FALSE;
+}
+
 bool32 AI_CanPoison(u32 battlerAtk, u32 battlerDef, u32 defAbility, u32 move, u32 partnerMove)
 {
     if (!AI_CanBePoisoned(battlerAtk, battlerDef, move)
@@ -2689,7 +2710,7 @@ bool32 AI_CanPoison(u32 battlerAtk, u32 battlerDef, u32 defAbility, u32 move, u3
     return TRUE;
 }
 
-static bool32 AI_CanBeParalyzed(u32 battler, u32 ability)
+bool32 AI_CanBeParalyzed(u32 battler, u32 ability)
 {
     if (ability == ABILITY_LIMBER
       || ability == ABILITY_COMATOSE
@@ -2767,6 +2788,21 @@ bool32 ShouldBurnSelf(u32 battler, u32 ability)
      ability == ABILITY_QUICK_FEET
       || ability == ABILITY_HEATPROOF
       || ability == ABILITY_MAGIC_GUARD
+      || ability == ABILITY_MARVEL_SCALE
+      || (ability == ABILITY_FLARE_BOOST && HasMoveWithCategory(battler, DAMAGE_CATEGORY_SPECIAL))
+      || (ability == ABILITY_GUTS && HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
+      || HasMoveEffect(battler, EFFECT_FACADE)
+      || HasMoveEffect(battler, EFFECT_PSYCHO_SHIFT)))
+        return TRUE;
+    return FALSE;
+}
+
+bool32 ShouldFrostbiteSelf(u32 battler, u32 ability)
+{
+    if (AI_CanGetFrostbite(battler, ability) && (
+     ability == ABILITY_QUICK_FEET
+      || ability == ABILITY_MARVEL_SCALE
+      || (ability == ABILITY_MAGIC_GUARD && !HasMoveWithCategory(battler, DAMAGE_CATEGORY_SPECIAL))
       || (ability == ABILITY_FLARE_BOOST && HasMoveWithCategory(battler, DAMAGE_CATEGORY_SPECIAL))
       || (ability == ABILITY_GUTS && HasMoveWithCategory(battler, DAMAGE_CATEGORY_PHYSICAL))
       || HasMoveEffect(battler, EFFECT_FACADE)
