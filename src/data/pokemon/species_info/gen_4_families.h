@@ -65,7 +65,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 36,
         .baseSpAttack  = 55,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
         .evYield_Attack = 1,
@@ -119,7 +119,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 56,
         .baseSpAttack  = 75,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND, TYPE_ROCK),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 263,
@@ -290,7 +290,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 108,
         .baseSpAttack  = 104,
         .baseSpDefense = 71,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING, TYPE_PSYCHIC),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 267,
@@ -409,7 +409,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 81,
         .baseSpDefense = 76,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 143,
         .evYield_SpAttack = 2,
@@ -466,7 +466,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 111,
         .baseSpDefense = 101,
-        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FLYING, TYPE_STEEL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 265,
@@ -644,7 +644,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 50,
         .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 60 : 50,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING, TYPE_FIGHTING),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 243,
@@ -708,7 +708,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 31,
         .baseSpAttack  = 35,
         .baseSpDefense = 40,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 58,
         .evYield_HP = 1,
@@ -765,7 +765,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 71,
         .baseSpAttack  = 55,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_WATER),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK, TYPE_WATER),
         .catchRate = 127,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 116,
         .evYield_Attack = 2,
@@ -821,7 +821,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 25,
         .baseSpAttack  = 25,
         .baseSpDefense = 41,
-        .types = MON_TYPES(TYPE_BUG),
+        .types = MON_TYPES(TYPE_BUG, TYPE_NORMAL, TYPE_FAIRY),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 39 : 54,
         .evYield_Defense = 1,
@@ -880,7 +880,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 65,
         .baseSpAttack  = 55,
         .baseSpDefense = 51,
-        .types = MON_TYPES(TYPE_BUG),
+        .types = MON_TYPES(TYPE_BUG, TYPE_NORMAL, TYPE_FAIRY),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 134 : 159,
         .evYield_Attack = 2,
@@ -996,7 +996,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 60,
         .baseSpDefense = 49,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FIGHTING),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 127 : 117,
         .evYield_Attack = 2,
@@ -1053,7 +1053,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 95,
         .baseSpDefense = 79,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FIGHTING, TYPE_DARK),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 262,
@@ -1117,7 +1117,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 58,
         .baseSpAttack  = 30,
         .baseSpDefense = 30,
-        .types = MON_TYPES(TYPE_ROCK),
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FIGHTING),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 99,
         .evYield_Attack = 1,
@@ -1170,7 +1170,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 58,
         .baseSpAttack  = 65,
         .baseSpDefense = 50,
-        .types = MON_TYPES(TYPE_ROCK),
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FIGHTING, TYPE_DRAGON),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
         .evYield_Attack = 2,
@@ -1277,7 +1277,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 47,
         .baseSpDefense = 138,
-        .types = MON_TYPES(TYPE_ROCK, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_ROCK, TYPE_STEEL, TYPE_PSYCHIC),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 199,
         .evYield_Defense = 2,
@@ -1297,8 +1297,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Their rock-hard faces serve to protect\n"
             "them from any frontral attacks.\n"
-            "When attacked, they form a wall.\n"
-            "They shielded their young in that way."),
+            "It seems its body evolved to defend.\n"
+            "its surprisingly large mind."),
         .pokemonScale = 272,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -1505,7 +1505,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 36,
         .baseSpAttack  = 79,
         .baseSpDefense = 105,
-        .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
+        .types = MON_TYPES(TYPE_BUG, TYPE_GRASS, TYPE_FAIRY),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
         .evYield_SpDefense = 2,
@@ -1560,7 +1560,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 36,
         .baseSpAttack  = 59,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_BUG, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_BUG, TYPE_GROUND, TYPE_WATER),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
         .evYield_Defense = 2,
@@ -1615,7 +1615,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 36,
         .baseSpAttack  = 69,
         .baseSpDefense = 95,
-        .types = MON_TYPES(TYPE_BUG, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_BUG, TYPE_STEEL, TYPE_POISON),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
         .evYield_Defense = 1,
@@ -1671,7 +1671,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 66,                                                \
         .baseSpAttack  = 94,                                                \
         .baseSpDefense = 50,                                                \
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                          \
+        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING, TYPE_DARK),               \
         .catchRate = 45,                                                    \
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,            \
         .evYield_Attack = 1,                                                \
@@ -1729,12 +1729,12 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 30,
         .baseSpDefense = 42,
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING, TYPE_GRASS),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 49 : 63,
         .evYield_Speed = 1,
         .itemRare = ITEM_HONEY,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(100),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1787,7 +1787,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 80,
         .baseSpDefense = 102,
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING, TYPE_GRASS),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 188,
         .evYield_Defense = 1,
@@ -1844,7 +1844,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 45,
         .baseSpDefense = 90,
-        .types = MON_TYPES(TYPE_ELECTRIC),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GRASS, TYPE_DARK),
         .catchRate = 200,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 120,
         .evYield_Speed = 1,
@@ -1900,7 +1900,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 60,
         .baseSpDefense = 30,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIRE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 75,
         .evYield_Speed = 1,
@@ -1918,10 +1918,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 7,
         .weight = 295,
         .description = COMPOUND_STRING(
-            "It inflates its flotation sac, keeping its\n"
-            "face above water in order to watch for\n"
-            "prey movement. It swims by rotating its\n"
-            "two tails like a screw."),
+            "It inflates its flotation sac with hot air,\n"
+            "keeping its face above water in order to\n"
+            "watch for prey movement. It swims by\n"
+            "rotating its two tails like a screw."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1955,7 +1955,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 115,
         .baseSpAttack  = 85,
         .baseSpDefense = 50,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 178,
         .evYield_Speed = 2,
@@ -1975,8 +1975,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Its flotation sac developed as a result\n"
             "of pursuing aquatic prey. It can double\n"
-            "as a rubber raft. It assists in the rescues\n"
-            "of drowning people."),
+            "as a rubber raft. The air inside is\n"
+            "constantly heated so it stays afloat."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -2011,7 +2011,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 35,
         .baseSpAttack  = 62,
         .baseSpDefense = 53,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 55 : 68,
         .evYield_SpAttack = 1,
@@ -2065,7 +2065,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 87,
         .baseSpDefense = 78,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 133,
         .evYield_SpAttack = 2,
@@ -2120,7 +2120,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 87,
         .baseSpDefense = 78,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 133,
         .evYield_SpAttack = 2,
@@ -2177,7 +2177,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 34,
         .baseSpAttack  = 57,
         .baseSpDefense = 62,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 73,
         .evYield_HP = 1,
@@ -2231,7 +2231,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 34,
         .baseSpAttack  = 57,
         .baseSpDefense = 62,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ICE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 65 : 73,
         .evYield_HP = 1,
@@ -2285,7 +2285,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 39,
         .baseSpAttack  = 92,
         .baseSpDefense = 82,
-        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ICE, TYPE_GROUND),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 176,
         .evYield_HP = 2,
@@ -2338,7 +2338,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 39,
         .baseSpAttack  = 92,
         .baseSpDefense = 82,
-        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ICE, TYPE_GROUND),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 166 : 176,
         .evYield_HP = 2,
@@ -2402,7 +2402,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FLUCTUATING,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
-        .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLARE_BOOST },
+        .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLASH_FIRE },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Drifloon"),
         .cryId = CRY_DRIFLOON,
@@ -2447,7 +2447,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 90,
         .baseSpDefense = 54,
-        .types = MON_TYPES(TYPE_GHOST, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_FLYING, TYPE_FIRE),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 174 : 204,
         .evYield_HP = 2,
@@ -2456,7 +2456,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FLUCTUATING,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
-        .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLARE_BOOST },
+        .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLASH_FIRE },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Drifblim"),
         .cryId = CRY_DRIFBLIM,
@@ -2502,7 +2502,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 44,
         .baseSpDefense = 56,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_ICE),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 70 : 84,
         .evYield_Speed = 1,
@@ -2520,10 +2520,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 4,
         .weight = 55,
         .description = COMPOUND_STRING(
-            "You can tell how it feels by the way\n"
-            "it rolls its ears. When it's scared,\n"
-            "both ears are rolled up. When it senses\n"
-            "danger, it perks them up."),
+            "Living in cold temperatures has caused\n"
+            "its fur to thicken. It is often used\n"
+            "for scarfs and mittens, though it\n"
+            "is typically treated well by farmers."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -2555,7 +2555,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 105,
         .baseSpAttack  = 54,
         .baseSpDefense = 96,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_ICE, TYPE_FIGHTING),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 178,
         .evYield_Speed = 2,
@@ -2573,10 +2573,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 12,
         .weight = 333,
         .description = COMPOUND_STRING(
-            "An extremely cautious Pokémon.\n"
-            "It is very conscious of its looks and\n"
-            "never fails to groom its ears.\n"
-            "It runs with sprightly jumps."),
+            "It is said that clothes made from\n"
+            "a Lopunny's fur will be comfortable\n"
+            "in any weather. Unfortunately, it is\n"
+            "too aggressive to find out for sure."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2610,7 +2610,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 135,
         .baseSpAttack  = 54,
         .baseSpDefense = 96,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_ICE, TYPE_FIGHTING),
         .catchRate = 60,
         .expYield = 203,
         .evYield_Speed = 2,
@@ -2630,8 +2630,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Mega Evolution awakens its combative\n"
             "instincts. It has shed any fur that got in\n"
-            "the way of its attacks.\n"
-            "crescent."),
+            "the way of its attacks."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2668,7 +2667,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 42,
         .baseSpDefense = 37,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 71,
         .evYield_Speed = 1,
@@ -2721,7 +2720,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 112,
         .baseSpAttack  = 64,
         .baseSpDefense = 59,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK, TYPE_ICE),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 158 : 183,
         .evYield_Speed = 2,
@@ -2742,7 +2741,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "It is a brazen brute that barges its way\n"
             "into another Pokémon's nest and claims\n"
             "it as its own. It binds its body with its\n"
-            "tails to make itself look bigger."),
+            "tails to keep its body cold."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -2828,7 +2827,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 84,
         .baseSpAttack  = 71,
         .baseSpDefense = 61,
-        .types = MON_TYPES(TYPE_POISON, TYPE_DARK),
+        .types = MON_TYPES(TYPE_POISON, TYPE_DARK, TYPE_FIRE),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 168 : 209,
         .evYield_HP = 2,
@@ -2882,7 +2881,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 23,
         .baseSpAttack  = 24,
         .baseSpDefense = 86,
-        .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 72,
         .evYield_Defense = 1,
@@ -2892,7 +2891,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
+        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Bronzor"),
         .cryId = CRY_BRONZOR,
@@ -2937,7 +2936,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 33,
         .baseSpAttack  = 79,
         .baseSpDefense = 116,
-        .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_STEEL, TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 188,
         .evYield_Defense = 1,
@@ -2948,7 +2947,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
+        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Bronzong"),
         .cryId = CRY_BRONZONG,
@@ -2994,7 +2993,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 91,
         .baseSpAttack  = 92,
         .baseSpDefense = 42,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING, TYPE_BUG),
         .catchRate = 30,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 144 : 107,
         .evYield_Attack = 1,
@@ -3015,8 +3014,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "It mimics the cries of other Pokémon to\n"
             "trick them into thinking it's one of them.\n"
-            "This way they won't attack it. It can\n"
-            "also learn and speak human words."),
+            "It is especially fond of Kricketune\n"
+            "and often takes after it."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -3049,7 +3048,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 35,
         .baseSpAttack  = 92,
         .baseSpDefense = 108,
-        .types = MON_TYPES(TYPE_GHOST, TYPE_DARK),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_DARK, TYPE_NORMAL),
         .catchRate = 100,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 168,
         .evYield_Defense = 1,
@@ -3104,7 +3103,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 42,
         .baseSpAttack  = 40,
         .baseSpDefense = 45,
-        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND, TYPE_ROCK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 67,
         .evYield_Attack = 1,
@@ -3161,7 +3160,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 82,
         .baseSpAttack  = 50,
         .baseSpDefense = 55,
-        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND, TYPE_ROCK),
         .catchRate = 45,
         .expYield = 144,
         .evYield_Attack = 2,
@@ -3218,7 +3217,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 102,
         .baseSpAttack  = 80,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND, TYPE_ROCK),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -3281,7 +3280,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 92,
         .baseSpAttack  = 120,
         .baseSpDefense = 95,
-        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_GROUND, TYPE_ROCK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 350 : 315,
         .evYield_Attack = 3,
@@ -3339,7 +3338,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 35,
         .baseSpDefense = 40,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_FAIRY),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 72,
         .evYield_Attack = 1,
@@ -3392,7 +3391,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 115,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_FIGHTING, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_FAIRY, TYPE_STEEL),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 204,
         .evYield_Attack = 1,
@@ -3448,7 +3447,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 112,
         .baseSpAttack  = 140,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_FIGHTING, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_FAIRY, TYPE_STEEL),
         .catchRate = 45,
         .expYield = 219,
         .evYield_Attack = 1,
@@ -3507,7 +3506,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 32,
         .baseSpAttack  = 38,
         .baseSpDefense = 42,
-        .types = MON_TYPES(TYPE_GROUND),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 140,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 95,
         .evYield_Defense = 1,
@@ -3566,7 +3565,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 47,
         .baseSpAttack  = 68,
         .baseSpDefense = 72,
-        .types = MON_TYPES(TYPE_GROUND),
+        .types = MON_TYPES(TYPE_GROUND, TYPE_DARK, TYPE_WATER),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
         .evYield_Defense = 2,
@@ -3584,10 +3583,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 20,
         .weight = 3000,
         .description = COMPOUND_STRING(
-            "It is surprisingly quick to anger.\n"
-            "It brandishes its gaping mouth in a\n"
-            "display of fearsome strength and raises\n"
-            "vast quantities of sand while attacking."),
+            "It is surprisingly quick to anger. It\n"
+            "brandishes its gaping mouth in a display\n"
+            "of fearsome strength and raises large\n"
+            "amounts of sand and water while attacking."),
         .pokemonScale = 261,
         .pokemonOffset = 2,
         .trainerScale = 334,
@@ -3680,7 +3679,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 60,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_POISON, TYPE_DARK),
+        .types = MON_TYPES(TYPE_POISON, TYPE_BUG, TYPE_DARK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 204,
         .evYield_Defense = 2,
@@ -3735,7 +3734,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 50,
         .baseSpAttack  = 61,
         .baseSpDefense = 40,
-        .types = MON_TYPES(TYPE_POISON, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_POISON, TYPE_FIGHTING, TYPE_DARK),
         .catchRate = 140,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 60 : 83,
         .evYield_Attack = 1,
@@ -3793,7 +3792,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 86,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_POISON, TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_POISON, TYPE_FIGHTING, TYPE_DARK),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 172 : 181,
         .evYield_Attack = 2,
@@ -3852,7 +3851,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 46,
         .baseSpAttack  = 90,
         .baseSpDefense = 72,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND, TYPE_STEEL),
         .catchRate = 200,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 164,
         .evYield_Attack = 2,
@@ -3907,7 +3906,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 66,
         .baseSpAttack  = 49,
         .baseSpDefense = 61,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 66 : 90,
         .evYield_Speed = 1,
@@ -3964,7 +3963,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 91,
         .baseSpAttack  = 69,
         .baseSpDefense = 86,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FLYING, TYPE_GRASS),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 156,
         .evYield_Speed = 2,
@@ -4022,7 +4021,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 62,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE, TYPE_ROCK),
         .catchRate = 120,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 67 : 131,
         .evYield_Attack = 1,
@@ -4080,7 +4079,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 92,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE, TYPE_ROCK),
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 173 : 214,
         .evYield_Attack = 1,
@@ -4139,7 +4138,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 30,
         .baseSpAttack  = 132,
         .baseSpDefense = 105,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_ICE, TYPE_ROCK),
         .catchRate = 60,
         .expYield = 208,
         .evYield_Attack = 1,
@@ -4199,7 +4198,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 91,
         .baseSpAttack  = 95,
         .baseSpDefense = 77,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_NORMAL),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 132,
         .evYield_Speed = 1,
@@ -4263,7 +4262,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 86,
         .baseSpAttack  = 105,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FIRE),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_FIRE),
         .catchRate = 45,
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
@@ -4319,7 +4318,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 86,
         .baseSpAttack  = 105,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_WATER),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_WATER),
         .catchRate = 45,
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
@@ -4376,7 +4375,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 86,
         .baseSpAttack  = 105,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_ICE),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_ICE),
         .catchRate = 45,
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
@@ -4432,7 +4431,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 86,
         .baseSpAttack  = 105,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_FLYING),
         .catchRate = 45,
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
@@ -4442,7 +4441,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_MOTOR_DRIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Rotom"),
         .cryId = CRY_ROTOM,
@@ -4489,7 +4488,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 86,
         .baseSpAttack  = 105,
         .baseSpDefense = 107,
-        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GRASS),
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_GHOST, TYPE_GRASS),
         .catchRate = 45,
         .expYield = ROTOM_APPLIANCE_EXP_YIELD,
         .evYield_Speed = 1,
@@ -4547,7 +4546,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 75,
         .baseSpDefense = 130,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_BUG, TYPE_ELECTRIC),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 290,
@@ -4610,7 +4609,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 105,
         .baseSpDefense = 105,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_BUG, TYPE_FIRE),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 290,
@@ -4674,7 +4673,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 115,
         .baseSpAttack  = 125,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_BUG, TYPE_GRASS),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 290,
@@ -4702,7 +4701,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "This Pokémon is said to have endowed\n"
             "humans with the determination needed to\n"
             "do things. It is thought that Uxie, Mesprit\n"
-            "and Azelf all came from the same egg."),
+            "and Azelf all came from the same swarm."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4745,7 +4744,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 150,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON, TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DIALGA_EXP_YIELD,
         .evYield_SpAttack = 3,
@@ -4800,7 +4799,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 150,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON, TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = DIALGA_EXP_YIELD,
         .evYield_SpAttack = 3,
@@ -4865,7 +4864,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 150,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_WATER, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_WATER, TYPE_DRAGON, TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = PALKIA_EXP_YIELD,
         .evYield_SpAttack = 3,
@@ -4920,7 +4919,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 120,
         .baseSpAttack  = 150,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_WATER, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_WATER, TYPE_DRAGON, TYPE_PSYCHIC),
         .catchRate = 3,
         .expYield = PALKIA_EXP_YIELD,
         .evYield_SpAttack = 3,
@@ -4977,7 +4976,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 77,
         .baseSpAttack  = 130,
         .baseSpDefense = 106,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_FIRE, TYPE_STEEL, TYPE_DRAGON),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -5038,7 +5037,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 80,
         .baseSpDefense = 110,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS, TYPE_GROUND),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 335,
@@ -5107,7 +5106,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 100,
         .baseSpDefense = 120,
-        .types = MON_TYPES(TYPE_GHOST, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_DRAGON, TYPE_DARK),
         .catchRate = 3,
         .expYield = GIRATINA_EXP_YIELD,
         .evYield_HP = 3,
@@ -5162,7 +5161,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 90,
         .baseSpAttack  = 120,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GHOST, TYPE_DRAGON),
+        .types = MON_TYPES(TYPE_GHOST, TYPE_DRAGON, TYPE_DARK),
         .catchRate = 3,
         .expYield = GIRATINA_EXP_YIELD,
         .evYield_HP = 3,
@@ -5220,7 +5219,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 75,
         .baseSpDefense = P_UPDATED_STATS >= GEN_9 ? 120 : 130,
-        .types = MON_TYPES(TYPE_PSYCHIC),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_GHOST, TYPE_DRAGON),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -5244,10 +5243,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 15,
         .weight = 856,
         .description = COMPOUND_STRING(
-            "Those who sleep holding one of\n"
-            "Cresselia's feathers are assured of\n"
-            "joyful dreams. It is said to represent\n"
-            "the crescent moon."),
+            "Those who sleep holding one of Cresselia's\n"
+            "feathers are assured of joyful dreams.\n"
+            "It can be surprisingly dangerous to those\n"
+            "that wish to disrupt people's sleep."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -5282,7 +5281,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 80,
         .baseSpAttack  = 80,
         .baseSpDefense = 80,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_GHOST),
         .catchRate = 30,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 240,
@@ -5332,6 +5331,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .isMythical = TRUE,
         .levelUpLearnset = sPhioneLevelUpLearnset,
         .teachableLearnset = sPhioneTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_MANAPHY})
     },
 
     [SPECIES_MANAPHY] =
@@ -5342,7 +5342,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 100,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_WATER),
+        .types = MON_TYPES(TYPE_WATER, TYPE_GHOST, TYPE_FAIRY),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -5404,7 +5404,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 125,
         .baseSpAttack  = 135,
         .baseSpDefense = 90,
-        .types = MON_TYPES(TYPE_DARK),
+        .types = MON_TYPES(TYPE_DARK, TYPE_GHOST, TYPE_ICE),
         .catchRate = 3,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 300,
@@ -5431,7 +5431,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "It chases people and Pokémon from its\n"
             "territory by causing them to experience\n"
-            "deep, nightmarish slumbers. However,\n"
+            "cold, nightmarish slumbers. However,\n"
             "it means no harm."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
@@ -5475,7 +5475,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 100,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_GRASS),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE, TYPE_ICE),
         .catchRate = 45,
         .expYield = SHAYMIN_EXP_YIELD,
         .evYield_HP = 3,
@@ -5496,9 +5496,9 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .weight = 21,
         .description = COMPOUND_STRING(
             "The flowers all over its body bloom if it is\n"
-            "lovingly hugged and senses gratitude. It\n"
-            "dissolves toxins in the air to transform\n"
-            "ruined land into a lush field of flowers."),
+            "warmly hugged and senses gratitude. It\n"
+            "reverts to this form when in contact with\n"
+            "intense winters."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -5532,7 +5532,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpeed     = 127,
         .baseSpAttack  = 120,
         .baseSpDefense = 75,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIRE, TYPE_FLYING),
         .catchRate = 45,
         .expYield = SHAYMIN_EXP_YIELD,
     #if P_UPDATED_EVS >= GEN_5
