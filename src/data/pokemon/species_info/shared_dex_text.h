@@ -83,14 +83,14 @@ const u8 gSpewpaPokedexText[] = _(
     "threaten them.");
 
 const u8 gFurfrouPokedexText[] = _(
-    "Trimming its fluffy fur not only makes\n"
-    "it more elegant but also increases the\n"
+    "Its fur is made of steel wool. Trimming it\n"
+    "makes it more elegant and increases the\n"
     "swiftness of its movements. These\n"
     "Pokémon were the guardians of kings.");
 
 const u8 gXerneasPokedexText[] = _(
-    "Legends say that when the horns on\n"
-    "its head shine in seven colors, it is\n"
+    "Its horns are made of natural metals.\n"
+    "When they shine in seven colors, it is\n"
     "sharing everlasting life. It slept for a\n"
     "thousand years in the form of a tree");
 
