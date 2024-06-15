@@ -3745,7 +3745,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpeed     = 85,
         .baseSpAttack  = 55,
         .baseSpDefense = 55,
-        .types = MON_TYPES(TYPE_WATER, TYPE_POISON, TYPE_ROCK),
+        .types = MON_TYPES(TYPE_WATER, TYPE_POISON, TYPE_NORMAL),
         .catchRate = 45,
         .expYield = QWILFISH_EXP_YIELD,
         .evYield_Attack = 1,
@@ -3762,12 +3762,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .natDexNum = NATIONAL_DEX_QWILFISH,
         .categoryName = _("Balloon"),
         .height = 5,
-        .weight = 590,
+        .weight = 39,
         .description = COMPOUND_STRING(
             "A Qwilfish uses the pressure of water it\n"
             "swallows to shoot toxic quills all at once\n"
-            "from all over its body. Due to its weight,\n"
-            "it finds swimming to be somewhat challenging."),
+            "from all over its body. It finds swimming\n"
+            "to be somewhat challenging."),
         .pokemonScale = 430,
         .pokemonOffset = 0,
         .trainerScale = 256,

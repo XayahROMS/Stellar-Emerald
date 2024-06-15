@@ -5369,7 +5369,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 60,
         .baseSpDefense = 60,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_POISON, TYPE_WATER),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_POISON, TYPE_FIRE),
         .catchRate = 255,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 126 : 85,
         .evYield_SpAttack = 1,
