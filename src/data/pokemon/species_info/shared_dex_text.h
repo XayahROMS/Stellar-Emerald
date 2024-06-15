@@ -110,8 +110,8 @@ const u8 gZygarde10PokedexText[] = _(
 const u8 gGumshoosPokedexText[] = _(
     "When it finds a trace of its prey, it\n"
     "patiently stakes out the location...\n"
-    "but as it's diurnal, it's always snoozing\n"
-    "by nightfall.");
+    "but as it's nocturnal, it's always\n"
+    "snoozing by sunrise.");
 
 const u8 gVikavoltPokedexText[] = _(
     "It concentrates electrical energy within\n"
