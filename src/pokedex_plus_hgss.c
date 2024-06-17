@@ -232,6 +232,8 @@ static const u8 sText_EVO_MAPSEC[] = _("{LV}{UP_ARROW} on {STR_VAR_2}");
 static const u8 sText_EVO_ITEM_MALE[] = _("{STR_VAR_2} used on male");
 static const u8 sText_EVO_ITEM_FEMALE[] = _("{STR_VAR_2} used on female");
 static const u8 sText_EVO_LEVEL_RAIN[] = _("{LV}{UP_ARROW} to {STR_VAR_2} while raining");
+static const u8 sText_EVO_LEVEL_SUN[] = _("{LV}{UP_ARROW} to {STR_VAR_2} while sunny");
+static const u8 sText_EVO_LEVEL_NEW_MAUVILLE[] = _("{LV}{UP_ARROW} to {STR_VAR_2} while near eletricity");
 static const u8 sText_EVO_SPECIFIC_MON_IN_PARTY[] = _("{LV}{UP_ARROW} with {STR_VAR_2} in party");
 static const u8 sText_EVO_LEVEL_DARK_TYPE_MON_IN_PARTY[] = _("{LV}{UP_ARROW} with dark type in party");
 static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = _("Traded for {STR_VAR_2}");
@@ -6605,6 +6607,13 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         case EVO_LEVEL_RAIN:
             //if (j == WEATHER_RAIN || j == WEATHER_RAIN_THUNDERSTORM || j == WEATHER_DOWNPOUR)
             StringExpandPlaceholders(gStringVar4, sText_EVO_LEVEL_RAIN );
+            break;
+        case EVO_LEVEL_SUN:
+            //if (j == WEATHER_DROUGHT || j == WEATHER_VOLCANIC_ASH)
+            StringExpandPlaceholders(gStringVar4, sText_EVO_LEVEL_SUN );
+            break;
+        case EVO_LEVEL_NEW_MAUVILLE:
+            StringExpandPlaceholders(gStringVar4, sText_EVO_LEVEL_NEW_MAUVILLE );
             break;
         case EVO_SPECIFIC_MON_IN_PARTY:
             StringCopy(gStringVar2, GetSpeciesName(evolutions[i].param)); //mon name

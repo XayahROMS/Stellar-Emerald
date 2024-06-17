@@ -4321,6 +4321,17 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                  && (j == WEATHER_FOG_HORIZONTAL || j == WEATHER_FOG_DIAGONAL))
                     targetSpecies = evolutions[i].targetSpecies;
                 break;
+            case EVO_LEVEL_SUN:
+                j = GetCurrentWeather();
+                if (evolutions[i].param <= level
+                 && (j == WEATHER_SUNNY || j == WEATHER_VOLCANIC_ASH))
+                    targetSpecies = evolutions[i].targetSpecies;
+                break;
+            case EVO_LEVEL_NEW_MAUVILLE:
+                if (evolutions[i].param <= level
+                 && gMapHEader.regionMapSectionID == MAPSEC_NEW_MAUVILLE)
+                    targetSpecies = evolutions[i].targetSpecies;
+                break;
             case EVO_MAPSEC:
                 if (gMapHeader.regionMapSectionId == evolutions[i].param)
                     targetSpecies = evolutions[i].targetSpecies;
