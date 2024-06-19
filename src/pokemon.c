@@ -4329,7 +4329,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_LEVEL_NEW_MAUVILLE:
                 if (evolutions[i].param <= level
-                 && gMapHeader.regionMapSectionID == MAPSEC_NEW_MAUVILLE)
+                 && gMapHeader.regionMapSectionId == MAPSEC_NEW_MAUVILLE)
                     targetSpecies = evolutions[i].targetSpecies;
                 break;
             case EVO_MAPSEC:
