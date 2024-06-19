@@ -5831,7 +5831,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 70,
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_GRASS),
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 61 : 74,
         .evYield_Attack = 1,
@@ -5885,7 +5885,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 60,
         .baseSpDefense = 70,
-        .types = MON_TYPES(TYPE_FIGHTING),
+        .types = MON_TYPES(TYPE_FIGHTING, TYPE_GRASS),
         .catchRate = 75,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 149,
         .evYield_Attack = 2,
@@ -12042,7 +12042,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 100,
         .baseSpDefense = 120,
     #if P_UPDATED_TYPES >= GEN_6
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY, TYPE_DARK),
     #else
         .types = MON_TYPES(TYPE_PSYCHIC),
     #endif
