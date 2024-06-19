@@ -3981,10 +3981,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 12,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "Lumineon swimming in the darkness\n"
-            "of the deep sea look like stars shining\n"
-            "in the night sky. It competes for food\n"
-            "with Lanturn."),
+            "Lumineon usually live among the seaweed in\n"
+            "the ocean depths. At dusk, they school near\n"
+            "the surface and leap out of the water. The\n"
+            "last rays of sunlight make their tail shine."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,

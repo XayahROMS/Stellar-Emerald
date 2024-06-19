@@ -1259,10 +1259,10 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 5,
         .weight = 149,
         .description = COMPOUND_STRING(
-            "The pleasant aroma that emanates\n"
-            "from this Pokémon's body helps\n"
-            "wheat grow, so Dachsbun has been\n"
-            "treasured by farming villages."),
+            "Its aroma is often described as\n"
+            "pleasant and looks somewhat soft,\n"
+            "but in reality Dachsbun's skin is\n"
+            "hard as charcoal and hot to the touch."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

@@ -4543,7 +4543,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 95,
         .baseSpAttack  = 130,
         .baseSpDefense = 115,
-        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY, tYPE_ROCK),
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY, TYPE_ROCK),
         .catchRate = 3,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,
         .evYield_SpAttack = 3,

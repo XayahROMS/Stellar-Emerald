@@ -1287,10 +1287,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 12,
         .weight = 199,
         .description = COMPOUND_STRING(
-            "It secretly marks potential targets with\n"
-            "a scent. By following the scent, it\n"
-            "stalks its targets and steals from them\n"
-            "when they least expect it."),
+            "They often move in small packs, working\n"
+            "together as one mind. They sometimes\n"
+            "have burn scars from disputes with\n"
+            "rival packs."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
