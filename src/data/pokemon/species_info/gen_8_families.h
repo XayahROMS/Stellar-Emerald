@@ -665,7 +665,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpeed     = 25,
         .baseSpAttack  = 35,
         .baseSpDefense = 35,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .types = MON_TYPES(TYPE_NORMAL, TYPE_ICE),
         .catchRate = 255,
         .expYield = 55,
         .evYield_HP = 1,
@@ -686,7 +686,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Found throughout the Galar region, this\n"
             "Pokémon becomes uneasy if its cheeks are\n"
-            "ever completely empty of berries."),
+            "ever completely empty of berries. Its fur\n"
+            "lets it survive cold winters."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -737,10 +738,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 6,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "It stashes berries in its tail--so many\n"
-            "berries that they fall out constantly.\n"
-            "But this Pokémon is a bit slow-witted,\n"
-            "so it doesn't notice the loss."),
+            "It is surprisingly adaptable. By storing\n"
+            "excess berries in its tail, it is able to\n"
+            "survive some of the hottest and coldest\n"
+            "environments in the world to find shelter."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4662,9 +4663,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 280,
         .description = COMPOUND_STRING(
             "It uses the horns on its head to sense the\n"
-            "emotions of others. Males will act as\n"
-            "valets for those they serve, looking\n"
-            "after their every need."),
+            "emotions of others. When it tries to\n"
+            "interpret many at once, it gets overwhelmed\n"
+            "and it horns grow blazing hot."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -4714,10 +4715,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 9,
         .weight = 280,
         .description = COMPOUND_STRING(
-            "They diligently serve people and\n"
-            "Pokémon so they can gather feelings\n"
-            "of gratitude. The females are\n"
-            "particularly good at babysitting."),
+            "They diligently serve people and Pokémon\n"
+            "so they can gather feelings of gratitude.\n"
+            "The females use their high body\n"
+            "temperature to keep babies warm."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,

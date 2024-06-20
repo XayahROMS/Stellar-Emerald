@@ -6176,10 +6176,10 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 10,
         .weight = 122,
         .description = COMPOUND_STRING(
-            "The chain is made from toxins that\n"
-            "enhance capabilities. It stimulated\n"
-            "Munkidori's brain and caused the\n"
-            "Pokémon's psychic powers to bloom."),
+            "The chain is made from toxins that enhance\n"
+            "capabilities. It once lived on high\n"
+            "mountaintops, and now uses its mind to cool\n"
+            "down the air around itself for comfort."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

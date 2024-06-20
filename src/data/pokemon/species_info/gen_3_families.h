@@ -895,10 +895,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 5,
         .weight = 325,
         .description = COMPOUND_STRING(
-            "It is exceedingly fast if it only has to run\n"
-            "in a straight line. When it spots pond-\n"
-            "dwelling prey underwater, it quickly leaps\n"
-            "in and catches it with its sharp claws."),
+            "When moving, this Pokémon can create\n"
+            "ghostly afterimages in its wake. Because\n"
+            "of this, it appears tobe going faster\n"
+            "than it is and is impossible to track."),
         .pokemonScale = 321,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -5333,9 +5333,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 715,
         .description = COMPOUND_STRING(
             "It stores power in the black pearls on its\n"
-            "forehead. When it uses psychic power, it\n"
-            "performs an odd dance step. Its style of\n"
-            "dancing became hugely popular overseas."),
+            "forehead. Despite its appearance, it is\n"
+            "apparently ancient, as even centuries\n"
+            "ago people were describing its dance."),
         .pokemonScale = 358,
         .pokemonOffset = 10,
         .trainerScale = 256,

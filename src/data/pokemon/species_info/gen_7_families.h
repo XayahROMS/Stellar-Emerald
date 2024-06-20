@@ -3100,10 +3100,10 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 15,
         .weight = 760,
         .description = COMPOUND_STRING(
-            "Deep in the jungle, high in the lofty\n"
-            "canopy, this Pokémon abides. On rare\n"
-            "occasions, it shows up at the beach to\n"
-            "match wits with Slowking."),
+            "It is said that this Pokemon was\n"
+            "once a statue built by an ancient\n"
+            "civilization. It now resides deep\n"
+            "in the jungle where it was made."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,

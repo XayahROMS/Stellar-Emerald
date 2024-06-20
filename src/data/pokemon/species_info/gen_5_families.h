@@ -3187,10 +3187,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 163,
         .description = COMPOUND_STRING(
-            "Even veteran Trainers face a challenge\n"
-            "in getting its beautiful flower to bloom.\n"
-            "It withers away if a trainer does not\n"
-            "take good care of it."),
+            "Lilligant's flowers are some of the most\n"
+            "beautiful in the world. Unfortunately,\n"
+            "their static charge make them a major\n"
+            "challenge to properly take care of."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
