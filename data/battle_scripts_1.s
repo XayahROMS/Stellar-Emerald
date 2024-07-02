@@ -700,8 +700,8 @@ BattleScript_FlingHypnoOrb:
 	jumpifsafeguard BattleScript_SafeguardProtected
 	jumpifuproarwakes BattleScript_ButItFailed
 	setyawn BattleScript_ButItFailed
+	playanimation BS_TARGET, B_ANIM_STATUS_DROWSY
 	printstring STRINGID_PKMNWASMADEDROWSY
-	playanimation B_ANIM_STATUS_DROWSY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_FlingEnd
 

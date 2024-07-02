@@ -975,7 +975,6 @@ gBattleAnims_StatusConditions::
 	.4byte Status_Burn                      @ B_ANIM_STATUS_BRN
 	.4byte Status_Infatuation               @ B_ANIM_STATUS_INFATUATION
 	.4byte Status_Sleep                     @ B_ANIM_STATUS_SLP
-	.4byte Status_Drowsy					@ B_ANIM_STATUS_DROWSY
 	.4byte Status_Paralysis                 @ B_ANIM_STATUS_PRZ
 	.4byte Status_Freeze                    @ B_ANIM_STATUS_FRZ
 	.4byte Status_Curse                     @ B_ANIM_STATUS_CURSED
@@ -1033,6 +1032,7 @@ gBattleAnims_General::
 	.4byte General_WonderRoom               @ B_ANIM_WONDER_ROOM
 	.4byte General_MagicRoom                @ B_ANIM_MAGIC_ROOM
 	.4byte General_Tailwind                 @ B_ANIM_TAILLWIND
+	.4byte Status_Drowsy					@ B_ANIM_STATUS_DROWSY
 
 	.align 2
 gBattleAnims_Special::
@@ -27787,7 +27787,9 @@ Status_Sleep:
 	end
 
 Status_Drowsy:
+	loadspritegfx ANIM_TAG_PINK_CLOUD
 	createvisualtask AnimTask_DeepInhale, 2, ANIM_TARGET
+	createsprite gYawnCloudSpriteTemplate, ANIM_TARGET, 5, 1
 	playsewithpan SE_M_YAWN, SOUND_PAN_TARGET
 	end
 
