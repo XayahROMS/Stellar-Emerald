@@ -973,44 +973,87 @@ PetalburgWoods_EventScript_DevonResearcherPanicTalk::
 # 489 "data/maps/PetalburgWoods/scripts.pory"
 	lockall
 # 490 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 17, emote_exclamation_mark
+	applymovement 17, PetalburgWoods_Movement_ExclamationMark
 # 491 "data/maps/PetalburgWoods/scripts.pory"
-	faceplayer
+	waitmovement 0
 # 492 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+	faceplayer
 # 493 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+# 494 "data/maps/PetalburgWoods/scripts.pory"
 	releaseall
 	return
 
 
 PetalburgWoods_EventScript_DevonResearcherPanicTriggerN::
-# 497 "data/maps/PetalburgWoods/scripts.pory"
-	lockall
 # 498 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 17, emote_exclamation_mark
+	lockall
 # 499 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 17, face_up
+	applymovement 17, PetalburgWoods_Movement_UpAndExclamationMark
 # 500 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+	waitmovement 0
 # 501 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, walk_right
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
 # 502 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PetalburgWoods_Movement_WalkRight
+# 503 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 504 "data/maps/PetalburgWoods/scripts.pory"
 	releaseall
 	return
 
 
 PetalburgWoods_EventScript_DevonResearcherPanicTriggerS::
-# 506 "data/maps/PetalburgWoods/scripts.pory"
-	lockall
-# 507 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 17, emote_exclamation_mark
 # 508 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement 17, face_down
+	lockall
 # 509 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+	applymovement 17, PetalburgWoods_Movement_DownAndExclamationMark
 # 510 "data/maps/PetalburgWoods/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, walk_right
+	waitmovement 0
 # 511 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DevonResearcherPanic, MSGBOX_NPC
+# 512 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, PetalburgWoods_Movement_WalkRight
+# 513 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 514 "data/maps/PetalburgWoods/scripts.pory"
 	releaseall
 	return
 
+
+# 517 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_ExclamationMark:
+# 518 "data/maps/PetalburgWoods/scripts.pory"
+	emote_exclamation_mark
+# 519 "data/maps/PetalburgWoods/scripts.pory"
+	delay_8
+	step_end
+
+# 522 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_UpAndExclamationMark:
+# 523 "data/maps/PetalburgWoods/scripts.pory"
+	emote_exclamation_mark
+# 524 "data/maps/PetalburgWoods/scripts.pory"
+	delay_8
+# 525 "data/maps/PetalburgWoods/scripts.pory"
+	face_up
+	step_end
+
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_DownAndExclamationMark:
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	emote_exclamation_mark
+# 530 "data/maps/PetalburgWoods/scripts.pory"
+	delay_8
+# 531 "data/maps/PetalburgWoods/scripts.pory"
+	face_down
+	step_end
+
+# 534 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_WalkRight:
+# 535 "data/maps/PetalburgWoods/scripts.pory"
+	delay_8
+# 536 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 537 "data/maps/PetalburgWoods/scripts.pory"
+	step_end

@@ -657,7 +657,9 @@ BattleScript_EffectFling::
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_MENTAL_HERB, BattleScript_FlingMentalHerb
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_POISON_POWER, BattleScript_FlingPoisonBarb
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_TOXIC_ORB, BattleScript_FlingToxicOrb
+	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_HYPNO_ORB, BattleScript_FlingHypnoOrb
 	jumpiflastuseditemholdeffect BS_ATTACKER, HOLD_EFFECT_RESTORE_STATS, BattleScript_FlingWhiteHerb
+	printstring STRINGID_PKMNWASMADEDROWSY
 	goto BattleScript_FlingEnd
 BattleScript_EffectFlingConsumeBerry:
 	savebattleritem BS_TARGET
@@ -687,9 +689,6 @@ BattleScript_FlingFlameOrb:
 	goto BattleScript_FlingEnd
 
 BattleScript_FlingHypnoOrb:
-	attackcanceler
-	attackstring
-	ppreduce
 	jumpifability BS_TARGET, ABILITY_VITAL_SPIRIT, BattleScript_PrintBattlerAbilityMadeIneffective
 	jumpifability BS_TARGET, ABILITY_INSOMNIA, BattleScript_PrintBattlerAbilityMadeIneffective
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_PrintBattlerAbilityMadeIneffective
@@ -699,11 +698,12 @@ BattleScript_FlingHypnoOrb:
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifsubstituteblocks BattleScript_ButItFailed
 	jumpifsafeguard BattleScript_SafeguardProtected
-	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	jumpifuproarwakes BattleScript_ButItFailed
 	setyawn BattleScript_ButItFailed
-	attackanimation
-	waitanimation
+	printstring STRINGID_PKMNWASMADEDROWSY
+	createvisualtask AnimTask_DeepInhale, 2, ANIM_TARGET
+	playsewithpan SE_M_YAWN, SOUND_PAN_TARGET
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_FlingEnd
 
 BattleScript_FlingFrigidOrb:
