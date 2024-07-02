@@ -975,6 +975,7 @@ gBattleAnims_StatusConditions::
 	.4byte Status_Burn                      @ B_ANIM_STATUS_BRN
 	.4byte Status_Infatuation               @ B_ANIM_STATUS_INFATUATION
 	.4byte Status_Sleep                     @ B_ANIM_STATUS_SLP
+	.4byte Status_Drowsy					@ B_ANIM_STATUS_DROWSY
 	.4byte Status_Paralysis                 @ B_ANIM_STATUS_PRZ
 	.4byte Status_Freeze                    @ B_ANIM_STATUS_FRZ
 	.4byte Status_Curse                     @ B_ANIM_STATUS_CURSED
@@ -27783,6 +27784,11 @@ Status_Sleep:
 	createsprite gSleepLetterZSpriteTemplate, ANIM_ATTACKER, 2, 4, -10, 16, 0, 0
 	delay 30
 	createsprite gSleepLetterZSpriteTemplate, ANIM_ATTACKER, 2, 4, -10, 16, 0, 0
+	end
+
+Status_Drowsy:
+	createvisualtask AnimTask_DeepInhale, 2, ANIM_TARGET
+	playsewithpan SE_M_YAWN, SOUND_PAN_TARGET
 	end
 
 Status_Paralysis:

@@ -701,8 +701,7 @@ BattleScript_FlingHypnoOrb:
 	jumpifuproarwakes BattleScript_ButItFailed
 	setyawn BattleScript_ButItFailed
 	printstring STRINGID_PKMNWASMADEDROWSY
-	createvisualtask AnimTask_DeepInhale, 2, ANIM_TARGET
-	playsewithpan SE_M_YAWN, SOUND_PAN_TARGET
+	playanimation B_ANIM_STATUS_DROWSY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_FlingEnd
 
