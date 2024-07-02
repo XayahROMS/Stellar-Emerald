@@ -687,6 +687,9 @@ BattleScript_FlingFlameOrb:
 	goto BattleScript_FlingEnd
 
 BattleScript_FlingHypnoOrb:
+	attackcanceler
+	attackstring
+	ppreduce
 	jumpifability BS_TARGET, ABILITY_VITAL_SPIRIT, BattleScript_PrintBattlerAbilityMadeIneffective
 	jumpifability BS_TARGET, ABILITY_INSOMNIA, BattleScript_PrintBattlerAbilityMadeIneffective
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_PrintBattlerAbilityMadeIneffective
@@ -699,6 +702,8 @@ BattleScript_FlingHypnoOrb:
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	jumpifuproarwakes BattleScript_ButItFailed
 	setyawn BattleScript_ButItFailed
+	attackanimation
+	waitanimation
 	goto BattleScript_FlingEnd
 
 BattleScript_FlingFrigidOrb:
