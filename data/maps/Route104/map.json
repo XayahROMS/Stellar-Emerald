@@ -529,6 +529,20 @@
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 31,
+      "y": 68,
+      "elevation": 0,
+      "dest_map": "MAP_SEASHORE_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 76,
+      "elevation": 0,
+      "dest_map": "MAP_SEASHORE_CAVE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
