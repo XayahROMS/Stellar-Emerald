@@ -1711,5 +1711,14 @@
       "width": 1,
       "height": 1
     }
+
+    {
+      "map_section": "MAPSEC_SEASHORE_CAVE",
+      "name": "SEASHORE CAVE",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    }
   ]
 }
