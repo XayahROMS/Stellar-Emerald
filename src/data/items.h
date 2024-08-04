@@ -7948,6 +7948,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
+        .iconPic = gItemIcon_ToxicOrb,
+        .iconPalette = gItemIconPalette_ToxicOrb,
     },
 
     [ITEM_FRIGID_ORB] =
@@ -7963,6 +7965,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
+        .iconPic = gItemIcon_ToxicOrb,
+        .iconPalette = gItemIconPalette_ToxicOrb,
     },
 
     [ITEM_STATIC_ORB] =
@@ -7978,6 +7982,8 @@ const struct Item gItemsInfo[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
+        .iconPic = gItemIcon_ToxicOrb,
+        .iconPalette = gItemIconPalette_ToxicOrb,
     },
 
 // Weather Rocks
@@ -14126,5 +14132,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeVial,
+        .iconPic = gItemIcon_Flute,
+        .iconPalette = gItemIconPalette_BlueFlute,
     }
 };
