@@ -1198,6 +1198,8 @@ extern const u32 gItemIcon_FlameOrb[];
 extern const u32 gItemIconPalette_FlameOrb[];
 extern const u32 gItemIcon_ToxicOrb[];
 extern const u32 gItemIconPalette_ToxicOrb[];
+extern const u32 gItemIcon_HypnoOrb[];
+extern const u32 gItemIconPalette_HypnoOrb[];
 // Weather Rocks
 extern const u32 gItemIcon_DampRock[];
 extern const u32 gItemIconPalette_DampRock[];

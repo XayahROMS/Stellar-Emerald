@@ -8246,7 +8246,7 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
             }
             break;
         case HOLD_EFFECT_HYPNO_ORB:
-            if (CanSleep(battler))
+            if (CanBeSlept(battler, battlerAbility))
             {
                 effect = ITEM_STATUS_CHANGE;
                 gBattleMons[battler].status1 = STATUS1_SLEEP;
@@ -8264,7 +8264,7 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
             }
             break;
         case HOLD_EFFECT_STATIC_ORB:
-            if (CanBeParalyzed(battler))
+            if (CanBeParalyzed(battler, battlerAbility))
             {
                 effect = ITEM_STATUS_CHANGE;
                 gBattleMons[battler].status1 = STATUS1_PARALYSIS;

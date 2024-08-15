@@ -2840,7 +2840,7 @@ bool32 ShouldPoisonSelf(u32 battler, u32 ability)
 
 bool32 ShouldSleepSelf(u32 battler, u32 ability)
 {
-    if (AI_CanSleep(battler, ability) && (
+    if (CanBeSlept(battler, ability) && (
       HasMoveEffect(battler, EFFECT_SLEEP_TALK)
       || HasMoveEffect(battler, EFFECT_SNORE)))
         return TRUE;    // battler can be slept and has move/ability that synergizes with being slept
