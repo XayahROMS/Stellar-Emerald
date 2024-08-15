@@ -531,6 +531,8 @@ extern const u32 gItemIcon_Flute[];
 extern const u32 gItemIconPalette_BlueFlute[];
 extern const u32 gItemIconPalette_YellowFlute[];
 extern const u32 gItemIconPalette_RedFlute[];
+extern const u32 gItemIcon_PokeVial[];
+extern const u32 gItemIconPalette_PokeVial[];
 // Encounter-modifying Flutes
 extern const u32 gItemIconPalette_BlackFlute[];
 extern const u32 gItemIconPalette_WhiteFlute[];
@@ -1200,6 +1202,10 @@ extern const u32 gItemIcon_ToxicOrb[];
 extern const u32 gItemIconPalette_ToxicOrb[];
 extern const u32 gItemIcon_HypnoOrb[];
 extern const u32 gItemIconPalette_HypnoOrb[];
+extern const u32 gItemIcon_StaticOrb[];
+extern const u32 gItemIconPalette_StaticOrb[];
+extern const u32 gItemIcon_FrigidOrb[];
+extern const u32 gItemIconPalette_FrigidOrb[];
 // Weather Rocks
 extern const u32 gItemIcon_DampRock[];
 extern const u32 gItemIconPalette_DampRock[];

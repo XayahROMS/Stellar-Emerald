@@ -273,6 +273,9 @@ const u32 gItemIconPalette_YellowFlute[] = INCBIN_U32("graphics/items/icon_palet
 
 const u32 gItemIconPalette_RedFlute[] = INCBIN_U32("graphics/items/icon_palettes/red_flute.gbapal.lz");
 
+const u32 gItemIcon_PokeVial[] = INCBIN_U32("graphics/items/icons/poke_vial.4bpp.lz");
+const u32 gItemIconPalette_PokeVial[] = INCBIN_U32("graphics/items/icons/poke_vial.gbapal.lz");
+
 // Encounter-modifying Flutes
 
 const u32 gItemIconPalette_BlackFlute[] = INCBIN_U32("graphics/items/icon_palettes/black_flute.gbapal.lz");
@@ -1294,6 +1297,12 @@ const u32 gItemIconPalette_ToxicOrb[] = INCBIN_U32("graphics/items/icon_palettes
 
 const u32 gItemIcon_HypnoOrb[] = INCBIN_U32("graphics/items/icons/hypno_orb.4bpp.lz");
 const u32 gItemIconPalette_HypnoOrb[] = INCBIN_U32("graphics/items/icon_palettes/hypno_orb.gbapal.lz");
+
+const u32 gItemIcon_StaticOrb[] = INCBIN_U32("graphics/items/icons/static_orb.4bpp.lz");
+const u32 gItemIconPalette_StaticOrb[] = INCBIN_U32("graphics/items/icon_palettes/static_orb.gbapal.lz");
+
+const u32 gItemIcon_FrigidOrb[] = INCBIN_U32("graphics/items/icons/frigid_orb.4bpp.lz");
+const u32 gItemIconPalette_FrigidOrb[] = INCBIN_U32("graphics/items/icon_palettes/frigid_orb.gbapal.lz");
 
 // Weather Rocks
 
